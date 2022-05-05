@@ -23,4 +23,4 @@ In addition to 2 plotting related files:
 + ```visualized.py```: Used to inspect the trained weights of ESMR (WarpReg) layer
 
 ## Example Usage
-```python train.pu```
+```python train.py```

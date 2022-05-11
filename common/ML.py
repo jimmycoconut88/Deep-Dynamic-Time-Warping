@@ -72,7 +72,7 @@ def test(epochs, model, test_loader, loss_function, log = False):
 
 #########################################################################################
 
-def standardCycle(epochs,learning_rate, model, train_dl, test_dl,scheduler=True, decay = True, log = False):
+def standardCycle(epochs,learning_rate, model, train_dl, test_dl,scheduler=False, decay = False, log = False):
 
   model.apply(reset_weights)
   train_accuracies = []
@@ -103,7 +103,7 @@ def standardCycle(epochs,learning_rate, model, train_dl, test_dl,scheduler=True,
   print(f"Accuracy on test set: {test_acc:.2f}")
   return test_acc, Losses, train_accuracies, test_accuracies, test_pred, test_exp
 
-def model_module(epochs,learning_rate, model, train_dl, test_dl, scheduler=True, decay = True, log = False):
+def model_module(epochs,learning_rate, model, train_dl, test_dl, scheduler=False, decay = False, log = False):
     
   model.apply(reset_weights)
   # Loss and optimizer

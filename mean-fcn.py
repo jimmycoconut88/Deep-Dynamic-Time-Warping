@@ -124,7 +124,7 @@ for j in [fcn,wfcn3,wfcn5,fcner3,fcner5,wfcner33,wfcner55,wfcner35]:
     for i in [fcn,wfcn3,wfcn5,fcner3,fcner5,wfcner33,wfcner55,wfcner35]:
         row.append(100*2/12*sum((j - i)/(j + i)))
     col.append(row)
-labels = ["FCN", "WFCN3", "WFCN5", "FCNER3", "FCNER5", "WFCN33", "WFCN55", "WFCN35"]
+labels = ["FCN", "WFCN3", "WFCN5", "FCNWR3", "FCNWR5", "WFCNWR33", "WFCNWR55", "WFCNWR35"]
 sns.set(font_scale=0.6)
 plot = sns.heatmap(col, annot=True, xticklabels =labels, yticklabels= labels)
 plot.xaxis.set_label_position('top')

@@ -90,17 +90,29 @@ wrner33 = np.array([
 82.13,
 75.48,
 48.31,
-
-
+])
+wrner55 = np.array([
+66.33,
+79.50,
+100.00,
+72.37,
+66.26,
+89.00,
+72.19,
+98.20,
+96.05,
+80.98,
+70.00,
+49.42,
 ])
 
 col = []
-for j in [ResNet1D,wrn3,wrn5,rner3,rner5,wrner33]:
+for j in [ResNet1D,wrn3,wrn5,rner3,rner5,wrner33,wrner55]:
     row = []
-    for i in [ResNet1D,wrn3,wrn5,rner3,rner5,wrner33]:
+    for i in [ResNet1D,wrn3,wrn5,rner3,rner5,wrner33, wrner55]:
         row.append(100*2/12*sum((j - i)/(j + i)))
     col.append(row)
-labels = ["ResNet", "WRN3", "WRN5", "RNER3", "RNER5", "WRN33"]
+labels = ["ResNet", "WRN3", "WRN5", "RNWR3", "RNWR5", "WRNWR33", "WRNWR55"]
 sns.set(font_scale=0.6)
 plot = sns.heatmap(col, annot=True, xticklabels =labels, yticklabels= labels)
 plot.xaxis.tick_top()

@@ -71,7 +71,7 @@ class _MockWarpFunction(Function):
   def forward(ctx, scores):
     dev = scores.device
     dtype = scores.dtype
-    sum = torch.sum(scores,3)                            # Sum each channels up  
+    sum = torch.sum(scores,dim=3)                            
     max = torch.max(sum,dim=2)
     #mask
     max_mask = torch.zeros(scores.shape).to(dev).type(dtype)

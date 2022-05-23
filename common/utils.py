@@ -230,6 +230,7 @@ def weight_label_optimal_heatmap(weights, test_ds, acc_reg, data_name, title, wi
         path, scores = warp(label,data[0])
         optimal_path[data[1]]+=path[0]
       for jdx in range(labels):
+        axs[idx][jdx].title.set_text("Weight for Label: " + str(idx) + " Correct Label: " + str(jdx))
         sns.heatmap(optimal_path[jdx], annot=False, ax=axs[idx][jdx]) #row, col
     data_dir = plot_dir +"/"+ data_name
     if not os.path.exists(plot_dir):
